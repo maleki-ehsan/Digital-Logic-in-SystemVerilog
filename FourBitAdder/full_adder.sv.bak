@@ -1,0 +1,24 @@
+`timescale 1ns / 100ps
+
+//////////////////////////////////////////////////////////////////////////////////
+// Author: Ehsan Maleki
+// Create Date:    16:48:40 21/10/2025 
+// Design Name: Full Adder
+// Module Name:    full_adder 
+// Project Name: 4bit Adder
+// Revision: 1.0 - File Created
+//////////////////////////////////////////////////////////////////////////////////
+
+module full_Adder (
+	input logic A , B, Cin,
+	output logic Sum, Cout
+	);
+	
+	tri P, G, H;
+	
+	
+	half_adder HA1 (A, B, P, G);
+	half_adder HA2 (P, Cin, Sum, H);
+	or (Cout, G, H);
+	
+endmodule

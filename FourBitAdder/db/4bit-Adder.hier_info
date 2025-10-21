@@ -1,0 +1,106 @@
+|DE0_CV_golden_top
+
+
+|DE0_CV_golden_top|Adder_4bit:adder
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Sum[0] <= half_adder:HA0.port2
+Sum[1] <= full_adder:FA1.port3
+Sum[2] <= full_adder:FA2.port3
+Sum[3] <= full_adder:FA3.port3
+Cout <= full_adder:FA3.port4
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|half_adder:HA0
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA1
+A => A.IN1
+B => B.IN1
+Cin => Cin.IN1
+Sum <= half_adder:HA2.port2
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA1|half_adder:HA1
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA1|half_adder:HA2
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA2
+A => A.IN1
+B => B.IN1
+Cin => Cin.IN1
+Sum <= half_adder:HA2.port2
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA2|half_adder:HA1
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA2|half_adder:HA2
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA3
+A => A.IN1
+B => B.IN1
+Cin => Cin.IN1
+Sum <= half_adder:HA2.port2
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA3|half_adder:HA1
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_CV_golden_top|Adder_4bit:adder|full_adder:FA3|half_adder:HA2
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
